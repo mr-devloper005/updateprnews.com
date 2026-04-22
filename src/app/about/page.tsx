@@ -1,93 +1,86 @@
-import Link from "next/link";
-import { PageShell } from "@/components/shared/page-shell";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { mockTeamMembers } from "@/data/mock-data";
-import { SITE_CONFIG } from "@/lib/site-config";
-
-const highlights = [
-  { label: "Creators onboarded", value: "12k+" },
-  { label: "Bookmarks shared", value: "180k" },
-  { label: "Listings published", value: "8.6k" },
-];
+import Link from 'next/link'
+import { NavbarShell } from '@/components/shared/navbar-shell'
+import { Footer } from '@/components/shared/footer'
+import { SITE_CONFIG } from '@/lib/site-config'
+import { ContentImage } from '@/components/shared/content-image'
 
 const values = [
-  { title: "Curated by people", description: "We believe trusted recommendations beat endless feeds." },
-  { title: "Designed for focus", description: "Clear, calm UI helps you find the next best resource fast." },
-  { title: "Built to share", description: "Collections make collaboration and knowledge flow effortless." },
-];
+  {
+    title: 'Media-first workflow',
+    description: 'Every release is structured for readability, indexing, and journalist-friendly handoff.',
+  },
+  {
+    title: 'Campaign visibility',
+    description: 'Publishing, distribution, and analytics live in one connected workflow for PR teams.',
+  },
+  {
+    title: 'Reliable delivery',
+    description: 'From quick updates to major launches, your message is delivered on a dependable stack.',
+  },
+]
+
+const milestones = [
+  { year: '2022', title: 'Platform foundation', text: 'Launched as a lightweight newsroom for modern digital PR teams.' },
+  { year: '2024', title: 'Distribution expansion', text: 'Added tiered reach options and deeper release performance analytics.' },
+  { year: '2026', title: 'Campaign-ready suite', text: 'Unified plans, latest-news discovery, and release publishing into one product.' },
+]
 
 export default function AboutPage() {
   return (
-    <PageShell
-      title={`About ${SITE_CONFIG.name}`}
-      description={`${SITE_CONFIG.name} is a modern platform for creators, communities, and curated business discovery.`}
-      actions={
-        <>
-          <Button variant="outline" asChild>
-            <Link href="/team">Meet the Team</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-        </>
-      }
-    >
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <Card className="border-border bg-card">
-          <CardContent className="space-y-4 p-6">
-            <Badge variant="secondary">Our Story</Badge>
-            <h2 className="text-2xl font-semibold text-foreground">
-              A single home for knowledge, discovery, and community.
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              {SITE_CONFIG.name} brings together publishing, listings, and social bookmarking so teams can move faster
-              and keep their best resources close.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {highlights.map((item) => (
-                <div key={item.label} className="rounded-lg border border-border bg-secondary/40 p-4">
-                  <div className="text-2xl font-semibold text-foreground">{item.value}</div>
-                  <div className="text-xs text-muted-foreground">{item.label}</div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-        <div className="space-y-4">
-          {values.map((value) => (
-            <Card key={value.title} className="border-border bg-card">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <div className="min-h-screen text-[#2f1515]">
+      <NavbarShell />
+      <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section className="rounded-3xl border border-[#FA9884]/40 bg-white p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#E74646]">About Us</p>
+          <h1 className="mt-2 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            {SITE_CONFIG.name} is built for teams that publish news with purpose
+          </h1>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-[#6c3b3b]">
+            We focus on clean release publishing, strong media distribution, and practical analytics so every announcement creates measurable impact.
+          </p>
+          <div className="relative mt-6 h-52 overflow-hidden rounded-2xl sm:h-64">
+            <ContentImage
+              src="https://images.pexels.com/photos/3183154/pexels-photo-3183154.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="UpdatePRNews team collaboration"
+              fill
+              className="object-cover"
+              intrinsicWidth={1400}
+              intrinsicHeight={900}
+            />
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/pricing" className="rounded-full bg-[#E74646] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#c73737]">
+              View Pricing
+            </Link>
+            <Link href="/contact" className="rounded-full border border-[#E74646] px-5 py-2.5 text-sm font-semibold text-[#E74646] hover:bg-[#fff2ef]">
+              Contact Team
+            </Link>
+          </div>
+        </section>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {mockTeamMembers.map((member) => (
-          <Card key={member.id} className="border-border bg-card transition-transform hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3">
-                <Avatar className="h-12 w-12">
-                  <AvatarImage src={member.avatar} alt={member.name} />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{member.name}</p>
-                  <p className="text-xs text-muted-foreground">{member.role}</p>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">{member.bio}</p>
-              <p className="mt-3 text-xs text-muted-foreground">{member.location}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </PageShell>
-  );
+        <section className="mt-8 grid gap-5 md:grid-cols-3">
+          {values.map((value) => (
+            <article key={value.title} className="rounded-2xl border border-[#FA9884]/40 bg-white p-5">
+              <h2 className="text-xl font-semibold">{value.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-[#6c3b3b]">{value.description}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="mt-8 rounded-3xl border border-[#FA9884]/40 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold">Our growth timeline</h2>
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {milestones.map((item) => (
+              <article key={item.year} className="rounded-2xl border border-[#FFE5CA] bg-[#FFF3E2]/55 p-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#E74646]">{item.year}</p>
+                <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-[#6c3b3b]">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  )
 }
