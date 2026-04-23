@@ -2,9 +2,15 @@ import { TaskListPage } from '@/components/tasks/task-list-page'
 import { buildTaskMetadata } from '@/lib/seo'
 
 export const revalidate = 3
-export const generateMetadata = () => buildTaskMetadata('mediaDistribution')
 
-export default async function UpdatesPage({
+export const generateMetadata = () =>
+  buildTaskMetadata('mediaDistribution', {
+    path: '/latest-news',
+    title: 'Latest News',
+    description: 'Browse the latest press releases and media announcements.',
+  })
+
+export default async function LatestNewsPage({
   searchParams,
 }: {
   searchParams?: Promise<{ category?: string; q?: string; date?: string }>
