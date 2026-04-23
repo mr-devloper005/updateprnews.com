@@ -2,80 +2,80 @@ import type { TaskKey } from '@/lib/site-config'
 
 export const siteContent = {
   navbar: {
-    tagline: 'Independent news desk',
+    tagline: 'Media Press Release Platform',
   },
   footer: {
-    tagline: 'Simple publishing for press-style updates',
+    tagline: 'Distribution-led newsroom publishing',
   },
   hero: {
-    badge: 'Latest updates',
-    title: ['Clear publishing, simple reading, no extra noise.'],
+    badge: 'Trusted Distribution',
+    title: ['Publish news that reaches media, journalists, and partners faster.'],
     description:
-      'A minimal article-style publishing template built for regular updates, announcements, and media distribution posts.',
+      'UpdatePRNews is built for press release teams that need clean publishing flows, clear visibility, and measurable coverage.',
     primaryCta: {
-      label: 'Browse latest posts',
+      label: 'Explore latest releases',
       href: '/updates',
     },
     secondaryCta: {
-      label: 'Contact us',
-      href: '/contact',
+      label: 'View pricing',
+      href: '/pricing',
     },
-    searchPlaceholder: 'Search posts',
-    focusLabel: 'Latest',
-    featureCardBadge: 'editor note',
-    featureCardTitle: 'Recent updates appear directly on the homepage.',
+    searchPlaceholder: 'Search press releases',
+    focusLabel: 'Breaking',
+    featureCardBadge: 'media note',
+    featureCardTitle: 'New announcements appear instantly on the newsroom feed.',
     featureCardDescription:
-      'The homepage works as a clean front page so new posts stay visible without decorative sections getting in the way.',
+      'The homepage highlights top releases, publishing plans, and category-specific coverage in one scan-friendly layout.',
   },
   home: {
     metadata: {
-      title: 'Latest updates and newsroom posts',
+      title: 'Press release distribution and latest business news',
       description:
-        'Read the latest updates, announcements, and stories through a simple archive-first publishing experience.',
-      openGraphTitle: 'Latest updates and newsroom posts',
+        'Publish and discover press releases with a modern newsroom designed for media distribution.',
+      openGraphTitle: 'UpdatePRNews | Media distribution and newsroom',
       openGraphDescription:
-        'A simple publishing template for updates, announcements, and readable article pages.',
-      keywords: ['newsroom posts', 'latest updates', 'announcements', 'press articles'],
+        'A clean SaaS-style press release platform with listing, search, distribution tiers, and story pages.',
+      keywords: ['press releases', 'media distribution', 'latest news', 'public relations', 'newsroom'],
     },
-    introBadge: 'About',
-    introTitle: 'A quiet publishing template made for regular updates.',
+    introBadge: 'Why UpdatePRNews',
+    introTitle: 'A distribution-first newsroom for modern PR teams.',
     introParagraphs: [
-      'This template is designed for sites that publish straightforward updates and want the homepage to behave like a clean front page rather than a product landing page.',
-      'Posts are visible immediately, archives stay easy to scan, and the reading page keeps the focus on the article itself.',
-      'The interface is intentionally simple so the site feels usable, familiar, and fast to update.',
+      'Launch announcements fast using structured publishing templates and editorial controls built for teams.',
+      'Improve discoverability with searchable latest news streams, category filters, and dedicated release detail pages.',
+      'Track momentum through plan-based analytics and campaign add-ons designed for media outreach.',
     ],
-    sideBadge: 'What it prioritizes',
+    sideBadge: 'What this product emphasizes',
     sidePoints: [
-      'Recent posts directly on the homepage.',
-      'Simple archive layout with sidebar search and recent items.',
-      'Readable article pages without comments or extra modules.',
-      'A publishing-first structure that stays easy to maintain.',
+      'Fast press release publishing workflows.',
+      'Category-driven latest news discovery.',
+      'Clear pricing with distribution level comparisons.',
+      'Readable article pages with related stories and sharing.',
     ],
     primaryLink: {
-      label: 'Open archive',
+      label: 'Open latest news',
       href: '/updates',
     },
     secondaryLink: {
-      label: 'Contact desk',
-      href: '/contact',
+      label: 'See plans',
+      href: '/pricing',
     },
   },
   cta: {
-    badge: 'Get in touch',
-    title: 'Use this template when publishing regular updates matters more than visual effects.',
+    badge: 'Start Publishing',
+    title: 'Choose a plan and distribute your next press release in minutes.',
     description:
-      'A straightforward layout for announcements, media coverage, partner updates, and newsroom-style content.',
+      'From startup launches to enterprise campaigns, UpdatePRNews gives your team a single platform to publish and measure outcomes.',
     primaryCta: {
-      label: 'Contact us',
-      href: '/contact',
+      label: 'View pricing',
+      href: '/pricing',
     },
     secondaryCta: {
-      label: 'View archive',
+      label: 'Latest news',
       href: '/updates',
     },
   },
-  taskSectionHeading: 'Latest posts',
-  taskSectionDescriptionSuffix: 'Read the newest published updates.',
+  taskSectionHeading: 'Latest press releases',
+  taskSectionDescriptionSuffix: 'Read the newest distributed announcements.',
 } as const
 
 export const taskPageMetadata: Record<Exclude<TaskKey, 'comment' | 'org' | 'social'>, { title: string; description: string }> = {
@@ -108,8 +108,8 @@ export const taskPageMetadata: Record<Exclude<TaskKey, 'comment' | 'org' | 'soci
     description: 'Open PDFs and downloadable files.',
   },
   mediaDistribution: {
-    title: 'Latest updates',
-    description: 'Read the latest published updates and announcements.',
+    title: 'Latest press releases',
+    description: 'Browse newly published press releases and newsroom announcements.',
   },
 }
 
@@ -128,14 +128,14 @@ export const taskIntroCopy: Record<
   comment: { title: 'Comments', paragraphs: ['Commentary and response posts.'], links: [{ label: 'Home', href: '/' }] },
   org: { title: 'Organizations', paragraphs: ['Organization pages and entities.'], links: [{ label: 'Home', href: '/' }] },
   mediaDistribution: {
-    title: 'Latest updates',
+    title: 'Latest news and press releases',
     paragraphs: [
-      'This archive is designed for straightforward publishing: regular updates, announcements, and media-style posts presented in a clean reading format.',
-      'The layout stays simple so visitors can scan headlines quickly, open stories easily, and move through the archive without distraction.',
+      'This newsroom is optimized for press release discovery with filters, search controls, and fast-scanning article cards.',
+      'Use category and date controls to quickly move from broad updates to campaign-specific release coverage.',
     ],
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Pricing', href: '/pricing' },
     ],
   },
 }
