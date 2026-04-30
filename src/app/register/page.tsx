@@ -25,7 +25,7 @@ function getRegisterConfig(kind: ReturnType<typeof getProductKind>) {
       panel: 'border border-[#dcc8b7] bg-[#fffdfa]',
       side: 'border border-[#e6d6c8] bg-[#fff4e8]',
       muted: 'text-[#6e5547]',
-      action: 'bg-[#241711] text-[#fff1e2] hover:bg-[#3a241b]',
+      action: 'bg-[#e74646] text-white hover:bg-[#c73737]',
       icon: FileText,
       title: 'Start your contributor workspace',
       body: 'Create a profile for essays, issue drafts, editorial review, and publication scheduling.',
