@@ -25,7 +25,7 @@ function getLoginConfig(kind: ReturnType<typeof getProductKind>) {
       panel: 'border border-[#dcc8b7] bg-[#fffdfa]',
       side: 'border border-[#e6d6c8] bg-[#fff4e8]',
       muted: 'text-[#6e5547]',
-      action: 'bg-[#241711] text-[#fff1e2] hover:bg-[#3a241b]',
+      action: 'bg-[#e74646] text-white hover:bg-[#c73737]',
       icon: FileText,
       title: 'Sign in to your publication workspace',
       body: 'Draft, review, and publish long-form work with the calmer reading system intact.',

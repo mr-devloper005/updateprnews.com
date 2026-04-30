@@ -58,14 +58,14 @@ export async function HomePageOverride() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/pricing"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#E74646] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c73737]"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#e74646] px-6 py-3 text-sm font-semibold text-[#e74646] transition hover:bg-[#fff2ef]"
                 >
                   View Pricing
                   <Zap className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/latest-news"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#FA9884] bg-[#FFE5CA] px-6 py-3 text-sm font-semibold text-[#7b2b2b] transition hover:bg-[#ffd9b2]"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#e74646] px-6 py-3 text-sm font-semibold text-[#e74646] transition hover:bg-[#fff2ef]"
                 >
                   Latest News
                 </Link>
